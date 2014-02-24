@@ -105,6 +105,7 @@ We collect lyrics from KKBOX, a music web site, and invite experts label ground 
 39. 胡又天，流行詞話，第三期，2011。
 40. 陳富容，現代華語流行歌詞格律初探，逢甲人文社會學報，第22期，第75-100頁，2011。
 41. 樂句(Phrase)，http://en.wikipedia.org/wiki/Phrase_(music)
+
 ------------------------------------------------------------------
 ## 基植於非負矩陣分解之華語流行音樂曲式分析
 ## 作者：黃柏堯
@@ -161,7 +162,8 @@ Experiments on eighty Chinese popular music are performed for performance evalua
 [40]    S. Velusamy, B. Thoshkahna, and K. R. Ramakrishnan, “A Novel Melody Line Identification Algorithm for Polyphonic MIDI Music,” Lecture Notes in Computer Science, Advances in Multimedia Modeling, LNCS, p.p. 248-257, 2007.
 [41]    P. H. Weng, An Automatic Musical Form Analysis System for Rondo and Fugue, Master Thesis, Department of Computer Science, National Tsing Hua University, 2004.
 [42]    F. Wiering, J. D. Nooijer, A. Volk, and H. J. M. T. Schijf, ”Cognition-based Segmentation for Music Information Retrieval Systems,” Journal of New Music Research, Vol. 38, No. 2, 2009.
-------
+
+-----------
 ## License
 
 All rights reserved.
