@@ -121,7 +121,7 @@ Our work is to analyze music form automatically by three steps, main melody find
 
 Experiments on eighty Chinese popular music are performed for performance evaluation of the proposed approaches. For the main melody finding, our proposed learning-based approach is better than existing methods. The proposed approaches achieve 82% F-score for sentence discovery while 71% F-score for music form discovery.
 
-## Referece
+## Reference
 1. 鄭淑儀, 台灣流行音樂與大眾文化, 私立輔仁大學大眾傳播所碩士論文, 1992。
 2. 文瀚, 流行音樂啟示錄, 萬象圖書, 1992。
 3. 吳祖強, 曲式與作品分析, 楊智文化, 1994。
