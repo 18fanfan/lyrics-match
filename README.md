@@ -105,7 +105,7 @@ We collect lyrics from KKBOX, a music web site, and invite experts label ground 
 41. 樂句(Phrase)，http://en.wikipedia.org/wiki/Phrase_(music)
 
 ------------------------------------------------------------------
-## 題目：基植於非負矩陣分解之華語流行音樂曲式分析
+## 題目：基植於非負矩陣分解之華語流行音樂曲式分析   
 Chinese popular music structure analysis based on non-negative matrix factorization
 ## 作者：黃柏堯
 ## 摘要
