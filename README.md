@@ -1,5 +1,5 @@
 # 「再三推詞」以曲找詞歌詞推薦系統
-![ScreenShot](https://raw.github.com/fukuball/lyrics-match/master/p-asset/image/lyrics-match-screenshot.png)
+![ScreenShot](https://raw.github.com/18fanfan/lyrics-match/master/p-asset/image/lyrics-match-screenshot.png)
 
 ## 動機與目標
 
@@ -13,8 +13,9 @@
 
 -----------------------
 ## 系統功能
+![ScreenShot](https://raw.github.com/18fanfan/lyrics-match/master/p-asset/image/system_arch.png)
 
-本系統提供使用者上傳音樂來取得適合搭配此首音樂的推薦歌詞清單。在推薦的歌詞結果中，系統會顯示歌曲音符與推薦歌詞的對應，因此使用者可以很容易的將推薦歌詞與上傳的歌曲配唱，同時，我們也將歌詞推薦結果用「虛擬歌手」配唱給使用者聆聽，讓使用者可以更深入的了解歌詞推薦結果在實際配唱起來的感覺。本系統提供的功能簡介如下：
+本系統提供使用者上傳音樂來取得適合搭配此首音樂的推薦歌詞清單。在推薦的歌詞結果中，系統會顯示歌曲音符與推薦歌詞的對應，因此使用者可以很容易的將推薦歌詞與上傳的歌曲配唱，同時，我們也將歌詞推薦結果用「虛擬歌手」配唱給使用者聆聽，讓使用者可以更深入的了解歌詞推薦結果在實際配唱起來的感覺。如上圖本系統分成三大部份分別是歌詞處理(Lyrics Process)、音樂處理(Music Process)與詞曲搭配(Alignment & Ranking)。各部份功能簡述如下：
 
 ### 1.歌曲結構分析
 
