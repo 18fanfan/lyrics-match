@@ -111,57 +111,61 @@ We collect lyrics from KKBOX, a music web site, and invite experts label ground 
 ## 作者：黃柏堯
 ## 摘要
 近幾年來，華語流行音樂的發展越來越多元，而大眾所接收到的資訊是流行音樂當中的組成元素”曲與詞”，兩者分別具有賦予人類感知的功能，使人能夠深刻體會音樂作品當中所表答的內容與意境。然而，作曲與作詞都是屬於專業的創作藝術，作詞者通常在填詞時，會先對樂曲當中的結構進行粗略的分析，找出整首曲子的曲式，而針對可以填詞的部份，再進行更細部的分析將詞填入最適當的位置。流行音樂當中，曲與詞存在著密不可分的關係，瞭解歌曲結構不僅能降低填詞的門檻，亦能夠明白曲子的骨架與脈絡;在音樂教育與音樂檢索方面亦有幫助。
+
 本研究的目標為，使用者輸入流行音樂歌曲，系統會自動分析出曲子的『曲式結構』。方法主要分成三個部分，分別為主旋律擷取、歌句分段與音樂曲式結構擷取。首先，我們利用Support Vector Machine以學習之方式建立模型後，擷取出符號音樂中之主旋律。第二步驟我們以”歌句”為單位，對主旋律進行分段，對於分段之結果建構出Self-Similarity Matrix矩陣。最後再利用Non-Negative Matrix Factorization針對不同特徵值矩陣進行分解並建立第二層之Self-Similarity Matrix矩陣，以歧異度之方式找出曲式邊界。
+
 我們針對分段方式對歌曲結構之影響進行分析與觀察。實驗數據顯示，事先將歌曲以歌句單位分段之效果較未分段佳，而歌句分段之評測結果F-Score為0.82;將音樂中以不同特徵值建構之自相似度矩進行Non-Negative Matrix Factorization後，另一空間中之基底特徵更能有效地分辨出不同的歌曲結構，其F-Score為0.71。
 
 ## Abstract
 Music structure analysis is helpful for music information retrieval, music education and alignment between lyrics and music. This thesis investigates the techniques of music structure analysis for Chinese popular music. 
+
 Our work is to analyze music form automatically by three steps, main melody finding, sentence discovery, and music form discovery. First, we extract main melody based on learning from user-labeled sample using support vector machine. Then, the boundary of music sentence is detected by two-way classification using support vector machine. To discover the music form, the sentence-based Self-Similarity Matrix is constructed for each music feature. Non-negative Matrix Factorization is employed to extract the new features and to construct the second level Self-Similarity Matrix. The checkerboard kernel correlation is utilized to find music form boundaries on the second level Self-Similarity Matrix. 
+
 Experiments on eighty Chinese popular music are performed for performance evaluation of the proposed approaches. For the main melody finding, our proposed learning-based approach is better than existing methods. The proposed approaches achieve 82% F-score for sentence discovery while 71% F-score for music form discovery.
 
 ## Referece
-[1]    鄭淑儀, 台灣流行音樂與大眾文化, 私立輔仁大學大眾傳播所碩士論文, 1992。
-[2]    文瀚, 流行音樂啟示錄, 萬象圖書, 1992。
-[3]    吳祖強, 曲式與作品分析, 楊智文化, 1994。
-[4]    曾慧佳, 從流行歌曲看台灣社會, 桂冠圖書, 1999。
-[5]    陳建銘, 國語流行歌曲中的編曲工作, 國立台灣大學音樂研究所碩士論文, 2002。
-[6]    黃志華, 粵語歌詞, 三聯書店, 2003。
-[7]    何旻璟, Theme-Based Music Structure Analysis, 國立政治大學資訊科學所碩士論文, 2004。
-[8]    徐大衛, 繆思的使徒-台灣戰後古典音樂樂評人的軌跡與信念, 國立台灣大學社會學研究所碩士論文, 2005。
-[9]    楊漢倫, 粵語流行曲導論, 香港特別行政區教育局, 2009。
-[10]    施啟智, 華語通俗音樂模組化數位音樂的構成、分析與應用, 樹德科技大學應用設計研究所碩士論文, 2009。
-[11]    E. Cambouropoulos, “The Local Boundary Detection Model (LBDM) and its Application in the Study of Expressive Timing,” Proceedings of the International Computer Music Conference, ICMC, 2001.
-[12]    C. C. Chang and C. J. Lin, “LIBSVM: A Library for Support Vector Machines,” Software Available at http://www.csie.ntu.edu.tw/~cjlin/libsvm
-[13]    Y. J. Chen, A Fast Repeating Pattern Finding Algorithm for Music Data: A Human Perspective Approach, Master Thesis, Department of Computer Science, National Cheng Kung University, 2004.
-[14]    J. Foote, “Visualizing Music and Audio Using Self-Similarity,” Proceedings of ACM International Conference on Multimedia, 1999.
-[15]    J. Foote, “Automatic Audio Segmentation Using A Measure of Audio Novelty,” in Proceedings of IEEE International Conference on Multimedia and Expo, 1999.
-[16]    C. Isikhan and G. Ozcan, ”A Survey of Melody Extraction Techniques for Music Information Retrieval,” Proceedings of the Conference on Interdisciplinary Musicology, CIM, 2008.
-[17]    F. Kaiser and T. Sikora, “Music Structure Discovery in Popular Music Using Non-Negative Matrix Factorization,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2010.
-[18]    K. Lee and M. Slaney, ”Automatic Chord Recognition from Audio Using an HMM with Supervised Learning,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2006.
-[19]    F. Lerdahl, and R. Jackenoff, A Generative Theory of Tonal Music, MIT Press, 1983.
-[20]    F. Lerdahl, Tonal Pitch Space, Oxford University Press, 2001.
-[21]    D. D. Lee and H. S. Seung, “Algorithm for Non-negative Matrix, Factorization,” Advances in Neural Information Processing Systems, Vol. 13, 556–562, 2001.
-[22]    S. E. Li, The Interaction between Melodies and Tones of the Lyrics in Mandarin Folk Songs, Master Thesis, Department of English, National Kaohsiung Normal University, 2002.
-[23]    T. Li, M. Ogihara, and G. Tzanetakis, Music Data Mining, CRC Press, 2012.
-[24]    Y. T. Lin, Cadences Detection for Music Structure Analysis, Master Thesis, Department of Computer Science, National Taiwan University, 2008.
-[25]    N. C. Maddage, Content-based Music Structure Analysis, Ph.D. Thesis, Department of Computer Science, National Singapore University, 2005.
-[26]    N. C. Maddage, H. Li, and M. S. Kankanhalli, “A Survey of Music Structure Analysis Techniques for Music Applications,” Multimedia Signal Processing and Communications, Vol. 231, 551-577, 2009.
-[27]    C. McKay, Automatic Genre Classification of MIDI Recordings, Master Thesis, Department of Computer Science, McGill University, 2004.
-[28]    C. McKay and I. Fujinaga, “jSymbolic: A Feature Extractor for MIDI Files,” Proceedings of the International Computer Music Conference, ICMC, 2006.
-[29]    E. Nichols, “Relationships between Lyrics and Melody in Popular Music,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2009.
-[30]    J. Paulus, A. Klapuri, ”Music Structure Analysis By Finding Repeating Parts,” Proceedings of ACM International Conference on Multimedia, 2006.
-[31]    J. Paulus, M. Muller, and A. Klapuri, “Audio-Based Music Structure Analysis,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2010.
-[32]    D. Rizo, P. J. P. Leon, A. Pertusa, and J. M. Inesta, ”Melodic Track Identification in MIDI Files,” Proceedings of the 19th International FLAIRS Conference, 2006.
-[33]    T. Rocher, M. Robine, P. Hanna, and R. Strandh, “Dynamic Chord Analysis for Symbolic Music,” Proceedings of the International Computer Music Conference, ICMC, 2009.
-[34]    X. Shao, N. C. Maddage, C. Xu, and M. S. Kankanhalli, “Automatic Music Summarization Based on Music Structure Analysis,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing, ICASSP, 2005.
-[35]    Y. Shiu, H. Jeong, and C. C. J. Kuo, “Similarity Matrix Processing for Music Structure Analysis,” Proceedings of 1st ACM Audio Music Computing Multimedia Workshop, 2006.
-[36]    V. Y. F. Tan and C. F’evotte, “Automatic Relevance Determination in Nonnegative Matrix Factorization,” Proceedings of Signal Processing with Adaptive Sparse Structured Representations, SPARS, 2009.
-[37]    M. Tang, Y. C. Lap, and B. Kao, “Selection of Melody Lines for Music Databases,” Proceedings of Annual International Computer Software and Application Conference, COMPSAC, 2000.
-[38]    D. Temperley, The Cognition of Basic Musical Structures, MIT Press, 2001.
-[39]    D. Temperley and D. Sleator, “The Melisma Music Analyzer,” Software Available at http://www.link.cs.cmu.edu/music-analysis/
-[40]    S. Velusamy, B. Thoshkahna, and K. R. Ramakrishnan, “A Novel Melody Line Identification Algorithm for Polyphonic MIDI Music,” Lecture Notes in Computer Science, Advances in Multimedia Modeling, LNCS, p.p. 248-257, 2007.
-[41]    P. H. Weng, An Automatic Musical Form Analysis System for Rondo and Fugue, Master Thesis, Department of Computer Science, National Tsing Hua University, 2004.
-[42]    F. Wiering, J. D. Nooijer, A. Volk, and H. J. M. T. Schijf, ”Cognition-based Segmentation for Music Information Retrieval Systems,” Journal of New Music Research, Vol. 38, No. 2, 2009.
+1. 鄭淑儀, 台灣流行音樂與大眾文化, 私立輔仁大學大眾傳播所碩士論文, 1992。
+2. 文瀚, 流行音樂啟示錄, 萬象圖書, 1992。
+3. 吳祖強, 曲式與作品分析, 楊智文化, 1994。
+4. 曾慧佳, 從流行歌曲看台灣社會, 桂冠圖書, 1999。
+5. 陳建銘, 國語流行歌曲中的編曲工作, 國立台灣大學音樂研究所碩士論文, 2002。
+6. 黃志華, 粵語歌詞, 三聯書店, 2003。
+7. 何旻璟, Theme-Based Music Structure Analysis, 國立政治大學資訊科學所碩士論文, 2004。
+8. 徐大衛, 繆思的使徒-台灣戰後古典音樂樂評人的軌跡與信念, 國立台灣大學社會學研究所碩士論文, 2005。
+9. 楊漢倫, 粵語流行曲導論, 香港特別行政區教育局, 2009。
+10. 施啟智, 華語通俗音樂模組化數位音樂的構成、分析與應用, 樹德科技大學應用設計研究所碩士論文, 2009。
+11.E. Cambouropoulos, “The Local Boundary Detection Model (LBDM) and its Application in the Study of Expressive Timing,” Proceedings of the International Computer Music Conference, ICMC, 2001.
+12. C. C. Chang and C. J. Lin, “LIBSVM: A Library for Support Vector Machines,” Software Available at http://www.csie.ntu.edu.tw/~cjlin/libsvm
+13. Y. J. Chen, A Fast Repeating Pattern Finding Algorithm for Music Data: A Human Perspective Approach, Master Thesis, Department of Computer Science, National Cheng Kung University, 2004.
+14. J. Foote, “Visualizing Music and Audio Using Self-Similarity,” Proceedings of ACM International Conference on Multimedia, 1999.
+15. J. Foote, “Automatic Audio Segmentation Using A Measure of Audio Novelty,” in Proceedings of IEEE International Conference on Multimedia and Expo, 1999.
+16. C. Isikhan and G. Ozcan, ”A Survey of Melody Extraction Techniques for Music Information Retrieval,” Proceedings of the Conference on Interdisciplinary Musicology, CIM, 2008.
+17. F. Kaiser and T. Sikora, “Music Structure Discovery in Popular Music Using Non-Negative Matrix Factorization,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2010.
+18. K. Lee and M. Slaney, ”Automatic Chord Recognition from Audio Using an HMM with Supervised Learning,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2006.
+19. F. Lerdahl, and R. Jackenoff, A Generative Theory of Tonal Music, MIT Press, 1983.
+20. F. Lerdahl, Tonal Pitch Space, Oxford University Press, 2001.
+21. D. D. Lee and H. S. Seung, “Algorithm for Non-negative Matrix, Factorization,” Advances in Neural Information Processing Systems, Vol. 13, 556–562, 2001.
+22. S. E. Li, The Interaction between Melodies and Tones of the Lyrics in Mandarin Folk Songs, Master Thesis, Department of English, National Kaohsiung Normal University, 2002.
+23. T. Li, M. Ogihara, and G. Tzanetakis, Music Data Mining, CRC Press, 2012.
+24. Y. T. Lin, Cadences Detection for Music Structure Analysis, Master Thesis, Department of Computer Science, National Taiwan University, 2008.
+25. N. C. Maddage, Content-based Music Structure Analysis, Ph.D. Thesis, Department of Computer Science, National Singapore University, 2005.
+26. N. C. Maddage, H. Li, and M. S. Kankanhalli, “A Survey of Music Structure Analysis Techniques for Music Applications,” Multimedia Signal Processing and Communications, Vol. 231, 551-577, 2009.
+27. C. McKay, Automatic Genre Classification of MIDI Recordings, Master Thesis, Department of Computer Science, McGill University, 2004.
+28. C. McKay and I. Fujinaga, “jSymbolic: A Feature Extractor for MIDI Files,” Proceedings of the International Computer Music Conference, ICMC, 2006.
+29. E. Nichols, “Relationships between Lyrics and Melody in Popular Music,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2009.
+30. J. Paulus, A. Klapuri, ”Music Structure Analysis By Finding Repeating Parts,” Proceedings of ACM International Conference on Multimedia, 2006.
+31. J. Paulus, M. Muller, and A. Klapuri, “Audio-Based Music Structure Analysis,” Proceedings of International Society for Music Information Retrieval, ISMIR, 2010.
+32. D. Rizo, P. J. P. Leon, A. Pertusa, and J. M. Inesta, ”Melodic Track Identification in MIDI Files,” Proceedings of the 19th International FLAIRS Conference, 2006.
+33. T. Rocher, M. Robine, P. Hanna, and R. Strandh, “Dynamic Chord Analysis for Symbolic Music,” Proceedings of the International Computer Music Conference, ICMC, 2009.
+34. X. Shao, N. C. Maddage, C. Xu, and M. S. Kankanhalli, “Automatic Music Summarization Based on Music Structure Analysis,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing, ICASSP, 2005.
+35. Y. Shiu, H. Jeong, and C. C. J. Kuo, “Similarity Matrix Processing for Music Structure Analysis,” Proceedings of 1st ACM Audio Music Computing Multimedia Workshop, 2006.
+36. V. Y. F. Tan and C. F’evotte, “Automatic Relevance Determination in Nonnegative Matrix Factorization,” Proceedings of Signal Processing with Adaptive Sparse Structured Representations, SPARS, 2009.
+37. M. Tang, Y. C. Lap, and B. Kao, “Selection of Melody Lines for Music Databases,” Proceedings of Annual International Computer Software and Application Conference, COMPSAC, 2000.
+38. D. Temperley, The Cognition of Basic Musical Structures, MIT Press, 2001.
+39. D. Temperley and D. Sleator, “The Melisma Music Analyzer,” Software Available at http://www.link.cs.cmu.edu/music-analysis/
+40. S. Velusamy, B. Thoshkahna, and K. R. Ramakrishnan, “A Novel Melody Line Identification Algorithm for Polyphonic MIDI Music,” Lecture Notes in Computer Science, Advances in Multimedia Modeling, LNCS, p.p. 248-257, 2007.
+41. P. H. Weng, An Automatic Musical Form Analysis System for Rondo and Fugue, Master Thesis, Department of Computer Science, National Tsing Hua University, 2004.
+42. F. Wiering, J. D. Nooijer, A. Volk, and H. J. M. T. Schijf, ”Cognition-based Segmentation for Music Information Retrieval Systems,” Journal of New Music Research, Vol. 38, No. 2, 2009.
 
 -----------
 ## License
